@@ -70,11 +70,11 @@
       <section class="hero-dark-bg">
         <div class="container">
           <h1 class="my-inscription">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-button">Order Service</button>
-          <!--Modal window-->
-          <div class="modal-backrod">
+          <button type="button" class="hero-button" data-modal-open>Order Service</button>
+          <!-- Modal window -->
+          <div class="modal-backrod is-hidden" data-modal>
             <div class="studio-window">
-              <button class="window-button" type="button">
+              <button class="window-button" type="button" data-modal-close>
                 <svg class="modal-icon" width="8" height="8">
                   <use href="./images/icons.svg#iconcloseblack18"></use>
                 </svg>
@@ -550,5 +550,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
