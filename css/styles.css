@@ -195,9 +195,11 @@ p {
     width: 100%;
 
 }
+.link-nav-current {color: var(--color-ocean);}
 
 .link-nav.link-nav-current::after {
     background-color: var(--color-ocean);
+   
 }
 
 /*addres*/
@@ -552,7 +554,7 @@ p {
     color: var(--color-iris);
     border: 1px solid var(--color-cornflower);
     padding: 12px 24px;
-    transition-property: background, color, cursor, border, box-shadow;
+    transition-property: background, color, border, box-shadow;
     transition-duration: var(--time-set);
     transition-timing-function: var(--timing-function);
 
@@ -639,7 +641,8 @@ p {
 
 }
 
-.link-marketing:hover .overlay-maketing {
+.link-marketing:hover .overlay-maketing,
+.link-marketing:focus .overlay-maketing{
     transform: translateY(0);
 }
 
@@ -652,7 +655,12 @@ p {
     right: 0;
     bottom: 0;
     background: rgba(46, 47, 66, 0.4);
-   
+    opacity: 1;
+visibility: visible;
+pointer-events: initial;
+   transition-property: opacity, visibility;
+   transition-duration: var(--time-set);
+   transition-timing-function: var(--timing-function);   
   }
 
 .studio-window {
@@ -679,10 +687,28 @@ p {
     top: 24px;
     right: 24px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: border, background-color, color;
+    transition-duration: var(--time-set);
+    transition-timing-function: var(--timing-function);
 
 }
 
-.is-hidden{opacity: 1;
+.is-hidden{opacity: 0;
 visibility: hidden;
-pointer-events: none;}
+pointer-events: none;
+transition-delay: var(--time-set);}
 
+.modal-icon {fill: currentColor}
+
+.window-button:hover,
+.window-button:focus {
+    border: 1px solid var(--color-ocean);
+    background-color: var(--color-ocean);
+    color: var(--color-white);}
+
+
+
+    
